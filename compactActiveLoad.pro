@@ -1,4 +1,4 @@
-update=2015-06-14 16:41:46
+update=2015-06-19 18:11:09
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,6 +6,23 @@ version=1
 NetIExt=net
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=D:/Lib/kicad
+[eeschema/libraries]
+LibName1=pnAnalogOther
+LibName2=pnConnector
+LibName3=pnDiode
+LibName4=pnLogic
+LibName5=pnModules
+LibName6=pnPins
+LibName7=pnPowerManagement
+LibName8=pnRC
+LibName9=pnSymbols
+LibName10=pnTransistor
+LibName11=pnSwitches
+LibName12=pnOpamp
+LibName13=C:/KiCad/share/kicad/library/power
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -23,21 +40,6 @@ ModuleTextSizeH=1
 ModuleTextSizeThickness=0.15
 SolderMaskClearance=0
 SolderMaskMinWidth=0
-DrawSegmentWidth=0.2
+DrawSegmentWidth=1.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
-[eeschema]
-version=1
-LibDir=D:/Lib/kicad
-[eeschema/libraries]
-LibName1=pnAnalogOther
-LibName2=pnConnector
-LibName3=pnDiode
-LibName4=pnLogic
-LibName5=pnModules
-LibName6=pnPins
-LibName7=pnPowerManagement
-LibName8=pnRC
-LibName9=pnSymbols
-LibName10=pnTransistor
-LibName11=pnSwitches
