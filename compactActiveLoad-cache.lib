@@ -229,7 +229,7 @@ ENDDEF
 DEF Testpoint TP 0 40 N N 1 F N
 F0 "TP" 50 50 60 H V L CNN
 F1 "Testpoint" 50 -50 60 H V L CNN
-F2 "" 0 0 60 H V C CNN
+F2 "pnConnector:TP_1mm" -50 -130 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
 C 0 25 25 0 1 0 N

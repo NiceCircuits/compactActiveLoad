@@ -1,0 +1,15 @@
+* D:\compactActiveLoad\sim\potentiometer.asc
+R1 N001 out {1-k+1p}
+R2 out 0 {k+1p}
+R3 out P001 {r2}
+V1 N001 0 1
+R4 N001 out {r1}
+V2 P001 0 -0.2
+.step param k 0 1 10m
+.param r1 1000G
+.param r2 0.1
+.step param r2 list 1000G 0.2
+;.step param r1 list 1000G 1 0.1
+.op
+.backanno
+.end

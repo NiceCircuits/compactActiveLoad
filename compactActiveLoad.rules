@@ -1,0 +1,77 @@
+
+(rules PCB compactActiveLoad
+  (snap_angle 
+    none
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule In1.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 152.4)
+    (clear 200.0)
+    (clear 76.2 (type smd_to_turn_gap))
+    (clear 152.6 (type "kicad_default"_"kicad_default"))
+  )
+  (padstack "Via[0-1]_604.8:300_um"
+    (shape
+      (circle F.Cu 604.8 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 604.8 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_604.8:300_um" "Via[0-1]_604.8:300_um" default
+  )
+  (via 
+    "Via[0-1]_604.8:300_um-kicad_default" "Via[0-1]_604.8:300_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_604.8:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_604.8:300_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 152.4)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(Q1-Pad3)" "Net-(Q1-Pad1)" "Net-(Q2-Pad3)" "Net-(CON1-Pad-)" "Net-(CON5-Pad2)" GND /Vin VCC
+    "Net-(P1-Pad2)" /Vout /Vfb /+12V /+5V /Vbat /Load
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 152.4)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+)
